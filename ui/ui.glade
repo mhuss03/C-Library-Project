@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+
+  <object class="GtkWindow" id="main_window">
+    <property name="title">Library Management System</property>
+    <property name="default-width">600</property>
+    <property name="default-height">400</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <property name="margin-top">10</property>
+        <property name="margin-bottom">10</property>
+        <property name="margin-start">10</property>
+        <property name="margin-end">10</property>
+
+        <child>
+          <object class="GtkLabel" id="header_label">
+            <property name="label">📚 Library Management System</property>
+            <attributes>
+              <attribute name="scale" value="2" />
+              <attribute name="weight" value="bold" />
+            </attributes>
+            <property name="halign">center</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox" id="search_bar_box">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">5</property>
+            <child>
+              <object class="GtkEntry" id="search_entry">
+                <property name="placeholder-text">Search for a book...</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="search_button">
+                <property name="label">Search</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <child>
+              <object class="GtkListBox" id="book_list">
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox" id="control_buttons">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">5</property>
+            <property name="halign">center</property>
+            <child>
+              <object class="GtkButton" id="add_book_button">
+                <property name="label">Add Book</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="remove_book_button">
+                <property name="label">Remove Book</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="exit_button">
+                <property name="label">Exit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+
+  <object class="GtkDialog" id="add_book_dialog">
+    <property name="title">Add a Book</property>
+    <property name="modal">true</property>
+    <property name="default-width">400</property>
+    <property name="default-height">300</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Title:</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="title_entry" />
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Author:</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="author_entry" />
+        </child>
+        <child>
+          <object class="GtkButton" id="add_button">
+            <property name="label">Add Book</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="cancel_button">
+            <property name="label">Cancel</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+
+</interface>

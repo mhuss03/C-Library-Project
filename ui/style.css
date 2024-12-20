@@ -1,0 +1,17 @@
+#add_button {
+  background-color: #4caf50;
+  color: white;
+}
+
+#cancel_button {
+  background-color: #f44336;
+  color: white;
+}
+
+#add_button:hover {
+  background-color: #45a049;
+}
+
+#cancel_button:hover {
+  background-color: #e53935;
+}
